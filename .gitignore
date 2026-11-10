@@ -1,0 +1,26 @@
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Model / data artifacts produced by notebooks
+*.gguf
+*.safetensors
+*.bin
+*.pt
+checkpoints/
+results/
+outputs/
+wandb/
+mlruns/
+# Secrets
+.env
+*.pem
+# OS / editor
+.DS_Store
+._*
+~$*
+# Book PDF must never be committed
+*.pdf

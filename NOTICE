@@ -1,0 +1,15 @@
+HandsOnLLM-Korean
+
+This repository contains notebooks derived from
+"Hands-On Large Language Models" official code repository
+  https://github.com/HandsOnLLM/Hands-On-Large-Language-Models
+Copyright 2024 Jay Alammar & Maarten Grootendorst
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Modifications (2026):
+- Adapted every chapter notebook to run on Amazon SageMaker AI Studio (JupyterLab).
+- Updated code for current library versions (transformers 5.x, numpy 2.x,
+  LangChain 1.x / langchain-classic, TRL 1.x, sentence-transformers 6.x, etc.).
+- Added Korean explanations, supplementary experiments, and notes on
+  differences from the book.
+The book text and figures are not included; the book is copyrighted by O'Reilly Media.

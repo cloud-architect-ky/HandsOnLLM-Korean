@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 940" width="100%" font-family="Helvetica, Arial, 'Apple SD Gothic Neo', 'Noto Sans CJK KR', sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+    <marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f78c8"/>
+    </marker>
+    <marker id="arP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e8336d"/>
+    </marker>
+  </defs>
+  <rect width="1120" height="940" fill="#fff"/>
+
+  <!-- ===== Input words ===== -->
+  <g font-size="22" font-weight="bold" text-anchor="middle" fill="#222">
+    <rect x="265" y="30" width="70" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/><text x="300" y="62">I</text>
+    <rect x="405" y="30" width="90" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/><text x="450" y="62">love</text>
+    <rect x="545" y="30" width="110" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/><text x="600" y="62">llamas</text>
+  </g>
+  <text x="150" y="112" font-size="19" fill="#666" text-anchor="middle">word2vec</text>
+  <text x="150" y="135" font-size="19" fill="#666" text-anchor="middle">embeddings</text>
+  <g stroke="#444" stroke-width="1.5">
+    <rect x="256" y="102" width="22" height="22" fill="#666"/><rect x="278" y="102" width="22" height="22" fill="#eee"/><rect x="300" y="102" width="22" height="22" fill="#666"/><rect x="322" y="102" width="22" height="22" fill="#ccc"/>
+    <rect x="406" y="102" width="22" height="22" fill="#eee"/><rect x="428" y="102" width="22" height="22" fill="#ccc"/><rect x="450" y="102" width="22" height="22" fill="#888"/><rect x="472" y="102" width="22" height="22" fill="#ccc"/>
+    <rect x="556" y="102" width="22" height="22" fill="#ddd"/><rect x="578" y="102" width="22" height="22" fill="#eee"/><rect x="600" y="102" width="22" height="22" fill="#888"/><rect x="622" y="102" width="22" height="22" fill="#555"/>
+  </g>
+  <g stroke="#555" stroke-width="2.5" marker-end="url(#ar)">
+    <line x1="300" y1="78" x2="300" y2="212"/><line x1="450" y1="78" x2="450" y2="212"/><line x1="600" y1="78" x2="600" y2="212"/>
+  </g>
+  <g font-size="20" font-style="italic" fill="#555">
+    <text x="308" y="172">1</text><text x="458" y="172">2</text><text x="608" y="172">3</text>
+  </g>
+  <text x="680" y="160" font-size="19" fill="#666">Order of processing</text>
+
+  <!-- ===== Dotted container ===== -->
+  <rect x="185" y="202" width="625" height="560" rx="10" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="3,5"/>
+
+  <!-- ===== Encoder ===== -->
+  <rect x="205" y="216" width="585" height="56" fill="#d5ecea" stroke="#333" stroke-width="2"/>
+  <text x="497" y="253" font-size="26" fill="#2aa198" text-anchor="middle">Encoder (RNN) — 1회 실행</text>
+
+  <g stroke="#555" stroke-width="2" marker-end="url(#ar)">
+    <line x1="300" y1="272" x2="300" y2="292"/><line x1="450" y1="272" x2="450" y2="292"/><line x1="600" y1="272" x2="600" y2="292"/>
+  </g>
+  <g stroke="#2aa198" stroke-width="1.5">
+    <rect x="256" y="296" width="22" height="22" fill="#e6f5f3"/><rect x="278" y="296" width="22" height="22" fill="#8fd0c8"/><rect x="300" y="296" width="22" height="22" fill="#2aa198"/><rect x="322" y="296" width="22" height="22" fill="#bfe5e0"/>
+    <rect x="406" y="296" width="22" height="22" fill="#2aa198"/><rect x="428" y="296" width="22" height="22" fill="#e6f5f3"/><rect x="450" y="296" width="22" height="22" fill="#8fd0c8"/><rect x="472" y="296" width="22" height="22" fill="#bfe5e0"/>
+    <rect x="556" y="296" width="22" height="22" fill="#bfe5e0"/><rect x="578" y="296" width="22" height="22" fill="#2aa198"/><rect x="600" y="296" width="22" height="22" fill="#e6f5f3"/><rect x="622" y="296" width="22" height="22" fill="#2aa198"/>
+  </g>
+  <g font-size="19" font-style="italic" fill="#1f7a72" text-anchor="middle">
+    <text x="300" y="340">h<tspan font-size="14" dy="4">I</tspan></text>
+    <text x="450" y="340">h<tspan font-size="14" dy="4">love</tspan></text>
+    <text x="600" y="340">h<tspan font-size="14" dy="4">llamas</tspan></text>
+  </g>
+  <text x="172" y="300" font-size="17" fill="#1f7a72" text-anchor="end">Hidden states of</text>
+  <text x="172" y="321" font-size="17" fill="#1f7a72" text-anchor="end">all input words</text>
+
+  <!-- ===== Transfer boundary ===== -->
+  <line x1="195" y1="368" x2="800" y2="368" stroke="#d08a00" stroke-width="2.5" stroke-dasharray="10,6"/>
+  <text x="172" y="364" font-size="17" font-weight="bold" fill="#b07400" text-anchor="end">인코더 → 디코더 전달</text>
+  <text x="172" y="386" font-size="17" font-weight="bold" fill="#b07400" text-anchor="end">h 3개뿐 (1회)</text>
+
+  <!-- ===== Decoder region ===== -->
+  <rect x="205" y="390" width="585" height="355" rx="12" fill="#fdeef4" stroke="#e8336d" stroke-width="2"/>
+  <text x="497" y="737" font-size="17" font-weight="bold" fill="#e8336d" text-anchor="middle">Attention decoder (RNN) 내부 — 4번째 단계 (“lama’s” 생성)</text>
+
+  <!-- h arrows into attention -->
+  <g stroke="#2aa198" stroke-width="2.5" marker-end="url(#ar)">
+    <line x1="300" y1="348" x2="300" y2="438"/><line x1="450" y1="348" x2="450" y2="438"/><line x1="600" y1="348" x2="600" y2="438"/>
+  </g>
+
+  <!-- Attention module -->
+  <rect x="230" y="442" width="430" height="96" rx="8" fill="#e8f1fa" stroke="#1f78c8" stroke-width="2"/>
+  <text x="445" y="468" font-size="20" font-weight="bold" fill="#1f78c8" text-anchor="middle">Attention</text>
+  <text x="445" y="495" font-size="17" fill="#1f78c8" text-anchor="middle">score(s₃, h<tspan font-size="12" dy="3">j</tspan><tspan dy="-3">) → softmax</tspan></text>
+  <text x="445" y="524" font-size="18" fill="#1f78c8" text-anchor="middle" font-style="italic">α = [0.1, 0.1, 0.8]</text>
+
+  <!-- decoder state s3 (query) -->
+  <rect x="682" y="452" width="96" height="76" rx="8" fill="#fff" stroke="#e8336d" stroke-width="2"/>
+  <text x="730" y="482" font-size="20" font-style="italic" fill="#e8336d" text-anchor="middle">s₃</text>
+  <text x="730" y="503" font-size="12" fill="#e8336d" text-anchor="middle">디코더 상태</text>
+  <text x="730" y="519" font-size="12" fill="#e8336d" text-anchor="middle">(Ik hou van까지)</text>
+  <line x1="682" y1="490" x2="664" y2="490" stroke="#e8336d" stroke-width="2.5" marker-end="url(#arP)"/>
+  <text x="730" y="444" font-size="13" fill="#e8336d" text-anchor="middle">query</text>
+
+  <!-- context -->
+  <line x1="445" y1="538" x2="445" y2="558" stroke="#1f78c8" stroke-width="2.5" marker-end="url(#arB)"/>
+  <rect x="290" y="562" width="300" height="46" rx="12" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="440" y="592" font-size="20" fill="#222" text-anchor="middle">Context embedding c<tspan font-size="14" dy="5">4</tspan></text>
+  <g stroke="#1f78c8" stroke-width="2">
+    <rect x="605" y="572" width="26" height="26" fill="#fff"/><rect x="631" y="572" width="26" height="26" fill="#a9cdec"/><rect x="657" y="572" width="26" height="26" fill="#1f78c8"/><rect x="683" y="572" width="26" height="26" fill="#a9cdec"/>
+  </g>
+  <text x="445" y="630" font-size="15" fill="#1f78c8" text-anchor="middle" font-style="italic">c₄ = 0.1·h<tspan font-size="11" dy="3">I</tspan><tspan dy="-3"> + 0.1·h</tspan><tspan font-size="11" dy="3">love</tspan><tspan dy="-3"> + 0.8·h</tspan><tspan font-size="11" dy="3">llamas</tspan></text>
+
+  <!-- RNN cell -->
+  <line x1="445" y1="636" x2="445" y2="652" stroke="#555" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="230" y="656" width="430" height="58" fill="#f9d6e4" stroke="#333" stroke-width="2"/>
+  <text x="445" y="684" font-size="18" fill="#c2185b" text-anchor="middle">RNN cell: (s₃, c₄, 직전 출력 “van”)</text>
+  <text x="445" y="706" font-size="18" fill="#c2185b" text-anchor="middle">→ 새 상태 s₄ → “lama’s”</text>
+
+  <!-- recurrence loop -->
+  <path d="M660,685 L730,685 L730,532" fill="none" stroke="#e8336d" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arP)"/>
+  <text x="738" y="615" font-size="12" fill="#e8336d">s₄는</text>
+  <text x="738" y="630" font-size="12" fill="#e8336d">다음 단계</text>
+  <text x="738" y="645" font-size="12" fill="#e8336d">query</text>
+
+  <!-- left labels for decoder -->
+  <text x="172" y="480" font-size="17" fill="#1f78c8" text-anchor="end">디코더가 직접 계산</text>
+  <text x="172" y="502" font-size="17" fill="#1f78c8" text-anchor="end">α, c<tspan font-size="12" dy="3">t</tspan><tspan dy="-3"> (단계마다 새로)</tspan></text>
+  <text x="172" y="592" font-size="15" fill="#888" text-anchor="end">인코더가 보내는 값 아님</text>
+
+  <!-- ===== Outputs ===== -->
+  <g stroke="#555" stroke-width="2.5" marker-end="url(#ar)">
+    <line x1="255" y1="745" x2="255" y2="792"/><line x1="395" y1="745" x2="395" y2="792"/>
+    <line x1="535" y1="745" x2="535" y2="792"/><line x1="685" y1="745" x2="685" y2="792"/>
+  </g>
+  <g font-size="20" font-style="italic" fill="#555">
+    <text x="263" y="782">4</text><text x="403" y="782">5</text><text x="543" y="782">6</text><text x="693" y="782">7</text>
+  </g>
+  <g font-size="22" font-weight="bold" text-anchor="middle" fill="#222">
+    <rect x="220" y="798" width="70" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/><text x="255" y="830">Ik</text>
+    <rect x="350" y="798" width="90" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/><text x="395" y="830">hou</text>
+    <rect x="490" y="798" width="90" height="48" rx="10" fill="#fff" stroke="#333" stroke-width="2"/><text x="535" y="830">van</text>
+    <rect x="630" y="798" width="110" height="48" rx="10" fill="#fff8e1" stroke="#e8336d" stroke-width="3"/><text x="685" y="830">lama’s</text>
+  </g>
+  <text x="685" y="868" font-size="15" fill="#e8336d" text-anchor="middle">지금 생성 중인 단계</text>
+
+  <!-- ===== Right panel ===== -->
+  <text x="835" y="250" font-size="17" font-weight="bold" fill="#333">그림 1-14의 “lama’s” 행</text>
+  <text x="835" y="272" font-size="17" font-weight="bold" fill="#333">= 이번 단계의 α</text>
+  <g font-size="15" fill="#333" text-anchor="middle">
+    <text x="912" y="302">I</text><text x="962" y="302">love</text><text x="1012" y="302">llamas</text>
+  </g>
+  <text x="880" y="335" font-size="15" fill="#333" text-anchor="end">lama’s</text>
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="887" y="312" width="50" height="36" fill="#d6e7f6"/><rect x="937" y="312" width="50" height="36" fill="#d6e7f6"/><rect x="987" y="312" width="50" height="36" fill="#1f78c8"/>
+  </g>
+  <g font-size="14" fill="#333" text-anchor="middle">
+    <text x="912" y="335">0.1</text><text x="962" y="335">0.1</text><text x="1012" y="335" fill="#fff">0.8</text>
+  </g>
+  <g font-size="15" fill="#555">
+    <text x="835" y="388">“Ik” 단계 → s₀로 α → c₁</text>
+    <text x="835" y="411">“hou” 단계 → s₁로 α → c₂</text>
+    <text x="835" y="434">“van” 단계 → s₂로 α → c₃</text>
+    <text x="835" y="457">“lama’s” 단계 → s₃로 α → c₄</text>
+  </g>
+  <rect x="830" y="490" width="270" height="118" rx="8" fill="#fffaf0" stroke="#d08a00" stroke-width="1.5"/>
+  <g font-size="15" fill="#333">
+    <text x="842" y="516" font-weight="bold">정리</text>
+    <text x="842" y="540">전달: h 3개 (인코더 → 디코더, 1회)</text>
+    <text x="842" y="563">계산: c₁~c₄ (디코더 안에서, 4회)</text>
+    <text x="842" y="590" fill="#888">그림 1-13은 고정 context 1개</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="560" y="905" font-size="15" font-style="italic" fill="#444" text-anchor="middle">그림 1-15 재구성: 인코더가 넘기는 것은 입력 단어별 hidden state뿐이다. 디코더는 출력 단계마다 자기 상태(query)로 α를 구해 context cₜ를 만든다.</text>
+  <text x="560" y="928" font-size="13" fill="#999" text-anchor="middle">α 값은 설명용 예시(실측값 아님). Bahdanau(2014)에서 s₀는 인코더 요약으로 초기화됨. 원 그림: Hands-On Large Language Models, Figure 1-13·1-14·1-15</text>
+</svg>
